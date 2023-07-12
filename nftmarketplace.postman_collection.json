@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "8f294de4-c04e-41bf-ab5e-4ef92c02def0",
+		"name": "nftmarketplace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listings",
+			"item": [
+				{
+					"name": "get listings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/v1/listings",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"listings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get listings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/listings",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"listings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Cache",
+									"value": "HIT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Feb 2022 08:02:07 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listings\": [\n        {\n            \"ID\": 1,\n            \"CreatedAt\": \"2022-02-27T06:40:32.520531Z\",\n            \"UpdatedAt\": \"2022-02-27T06:40:32.520531Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename81\",\n            \"Price\": 94.05090880450125,\n            \"ImageURL\": \"fakeurl47\"\n        },\n        {\n            \"ID\": 2,\n            \"CreatedAt\": \"2022-02-27T06:40:32.523886Z\",\n            \"UpdatedAt\": \"2022-02-27T06:40:32.523886Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename59\",\n            \"Price\": 42.46374970712657,\n            \"ImageURL\": \"fakeurl18\"\n        },\n        {\n            \"ID\": 3,\n            \"CreatedAt\": \"2022-02-27T06:40:32.527654Z\",\n            \"UpdatedAt\": \"2022-02-27T06:40:32.527654Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename25\",\n            \"Price\": 15.651925473279125,\n            \"ImageURL\": \"fakeurl56\"\n        },\n        {\n            \"ID\": 4,\n            \"CreatedAt\": \"2022-02-27T06:40:32.530745Z\",\n            \"UpdatedAt\": \"2022-02-27T06:40:32.530745Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename0\",\n            \"Price\": 51.52126285020654,\n            \"ImageURL\": \"fakeurl11\"\n        },\n        {\n            \"ID\": 5,\n            \"CreatedAt\": \"2022-02-27T06:40:32.537061Z\",\n            \"UpdatedAt\": \"2022-02-27T06:40:32.537061Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename62\",\n            \"Price\": 38.065718929968604,\n            \"ImageURL\": \"fakeurl28\"\n        },\n        {\n            \"ID\": 6,\n            \"CreatedAt\": \"2022-02-27T06:45:31.611052Z\",\n            \"UpdatedAt\": \"2022-02-27T06:45:31.611052Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"sellerex\",\n            \"Price\": 69.42069,\n            \"ImageURL\": \"imageurlex\"\n        },\n        {\n            \"ID\": 7,\n            \"CreatedAt\": \"2022-02-27T06:45:35.328354Z\",\n            \"UpdatedAt\": \"2022-02-27T06:45:35.328354Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"sellerex\",\n            \"Price\": 69.42069,\n            \"ImageURL\": \"imageurlex\"\n        },\n        {\n            \"ID\": 8,\n            \"CreatedAt\": \"2022-02-27T06:45:36.567892Z\",\n            \"UpdatedAt\": \"2022-02-27T06:45:36.567892Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"sellerex\",\n            \"Price\": 69.42069,\n            \"ImageURL\": \"imageurlex\"\n        },\n        {\n            \"ID\": 40,\n            \"CreatedAt\": \"2022-02-27T06:58:49.518184Z\",\n            \"UpdatedAt\": \"2022-02-27T06:58:49.518184Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename81\",\n            \"Price\": 94.05090880450125,\n            \"ImageURL\": \"fakeurl47\"\n        },\n        {\n            \"ID\": 41,\n            \"CreatedAt\": \"2022-02-27T06:58:49.53632Z\",\n            \"UpdatedAt\": \"2022-02-27T06:58:49.53632Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename59\",\n            \"Price\": 42.46374970712657,\n            \"ImageURL\": \"fakeurl18\"\n        },\n        {\n            \"ID\": 42,\n            \"CreatedAt\": \"2022-02-27T06:58:49.543462Z\",\n            \"UpdatedAt\": \"2022-02-27T06:58:49.543462Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename25\",\n            \"Price\": 15.651925473279125,\n            \"ImageURL\": \"fakeurl56\"\n        },\n        {\n            \"ID\": 43,\n            \"CreatedAt\": \"2022-02-27T06:58:49.548062Z\",\n            \"UpdatedAt\": \"2022-02-27T06:58:49.548062Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename0\",\n            \"Price\": 51.52126285020654,\n            \"ImageURL\": \"fakeurl11\"\n        },\n        {\n            \"ID\": 44,\n            \"CreatedAt\": \"2022-02-27T06:58:49.553547Z\",\n            \"UpdatedAt\": \"2022-02-27T06:58:49.553547Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename62\",\n            \"Price\": 38.065718929968604,\n            \"ImageURL\": \"fakeurl28\"\n        },\n        {\n            \"ID\": 45,\n            \"CreatedAt\": \"2022-02-27T07:00:18.817783Z\",\n            \"UpdatedAt\": \"2022-02-27T07:00:18.817783Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"sellere1x\",\n            \"Price\": 69.42069,\n            \"ImageURL\": \"imageurlex\"\n        },\n        {\n            \"ID\": 46,\n            \"CreatedAt\": \"2022-02-27T07:00:34.467472Z\",\n            \"UpdatedAt\": \"2022-02-27T07:00:34.467472Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"sellerex1\",\n            \"Price\": 69.42069,\n            \"ImageURL\": \"imageurlex\"\n        },\n        {\n            \"ID\": 47,\n            \"CreatedAt\": \"2022-02-27T07:00:43.170681Z\",\n            \"UpdatedAt\": \"2022-02-27T07:00:43.170681Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"sellerex\",\n            \"Price\": 69.42069,\n            \"ImageURL\": \"imageurlex\"\n        },\n        {\n            \"ID\": 48,\n            \"CreatedAt\": \"2022-02-27T07:55:02.820612Z\",\n            \"UpdatedAt\": \"2022-02-27T07:55:02.820612Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename81\",\n            \"Price\": 94.05090880450125,\n            \"ImageURL\": \"fakeurl47\"\n        },\n        {\n            \"ID\": 49,\n            \"CreatedAt\": \"2022-02-27T07:55:02.859792Z\",\n            \"UpdatedAt\": \"2022-02-27T07:55:02.859792Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename59\",\n            \"Price\": 42.46374970712657,\n            \"ImageURL\": \"fakeurl18\"\n        },\n        {\n            \"ID\": 50,\n            \"CreatedAt\": \"2022-02-27T07:55:02.86373Z\",\n            \"UpdatedAt\": \"2022-02-27T07:55:02.86373Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename25\",\n            \"Price\": 15.651925473279125,\n            \"ImageURL\": \"fakeurl56\"\n        },\n        {\n            \"ID\": 51,\n            \"CreatedAt\": \"2022-02-27T07:55:02.865952Z\",\n            \"UpdatedAt\": \"2022-02-27T07:55:02.865952Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename0\",\n            \"Price\": 51.52126285020654,\n            \"ImageURL\": \"fakeurl11\"\n        },\n        {\n            \"ID\": 52,\n            \"CreatedAt\": \"2022-02-27T07:55:02.869821Z\",\n            \"UpdatedAt\": \"2022-02-27T07:55:02.869821Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename62\",\n            \"Price\": 38.065718929968604,\n            \"ImageURL\": \"fakeurl28\"\n        },\n        {\n            \"ID\": 81,\n            \"CreatedAt\": \"2022-02-27T07:57:20.528633Z\",\n            \"UpdatedAt\": \"2022-02-27T07:57:20.528633Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename81\",\n            \"Price\": 94.05090880450125,\n            \"ImageURL\": \"fakeurl47\"\n        },\n        {\n            \"ID\": 82,\n            \"CreatedAt\": \"2022-02-27T07:57:20.541463Z\",\n            \"UpdatedAt\": \"2022-02-27T07:57:20.541463Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename59\",\n            \"Price\": 42.46374970712657,\n            \"ImageURL\": \"fakeurl18\"\n        },\n        {\n            \"ID\": 83,\n            \"CreatedAt\": \"2022-02-27T07:57:20.550489Z\",\n            \"UpdatedAt\": \"2022-02-27T07:57:20.550489Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename25\",\n            \"Price\": 15.651925473279125,\n            \"ImageURL\": \"fakeurl56\"\n        },\n        {\n            \"ID\": 84,\n            \"CreatedAt\": \"2022-02-27T07:57:20.55419Z\",\n            \"UpdatedAt\": \"2022-02-27T07:57:20.55419Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename0\",\n            \"Price\": 51.52126285020654,\n            \"ImageURL\": \"fakeurl11\"\n        },\n        {\n            \"ID\": 85,\n            \"CreatedAt\": \"2022-02-27T07:57:20.55856Z\",\n            \"UpdatedAt\": \"2022-02-27T07:57:20.55856Z\",\n            \"DeletedAt\": null,\n            \"Seller\": \"fakename62\",\n            \"Price\": 38.065718929968604,\n            \"ImageURL\": \"fakeurl28\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create listing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"imageURL\": \"imageurlex\",\n    \"seller\": \"sellerex\",\n    \"price\": 69.420\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/listings",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"listings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create listing",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"imageURL\": \"imageurlex\",\n    \"seller\": \"sellerex\",\n    \"price\": 69.420\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/listings",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"listings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Feb 2022 08:02:35 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listing\": {\n        \"ID\": 91,\n        \"CreatedAt\": \"2022-02-27T08:02:35.2805089Z\",\n        \"UpdatedAt\": \"2022-02-27T08:02:35.2805089Z\",\n        \"DeletedAt\": null,\n        \"Seller\": \"sellerex\",\n        \"Price\": 69.42,\n        \"ImageURL\": \"imageurlex\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete listing",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/v1/listings/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"listings",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "23"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "new transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ID\": 0,\n\t\"seller\": \"exseller\",\n\t\"buyer\": \"exbuyer\" ,\n    \"price\": 69.420\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/transactions",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new transaction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ID\": 0,\n\t\"seller\": \"exseller\",\n\t\"buyer\": \"exbuyer\" ,\n    \"price\": 69.420\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/transactions",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"transactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Feb 2022 08:03:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"transaction\": {\n        \"ID\": 4,\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n        \"DeletedAt\": null,\n        \"seller\": \"exseller\",\n        \"buyer\": \"exbuyer\",\n        \"price\": 69.42,\n        \"string\": \"\",\n        \"error\": \"\",\n        \"finishAt\": \"0001-01-01T00:00:00Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

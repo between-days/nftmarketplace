@@ -1,0 +1,59 @@
+# services:
+#   nftmarketplace:
+#     build: 
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3001:8000"
+#   redis:
+#     image: redis
+#     ports: 
+#      - "6379:6379"
+
+services:
+  api:
+    build: .
+    ports:
+      - "3001:8000"
+    links:
+      - "db:postgres"
+      - "cache:redis"
+    depends_on:
+      - postgres
+      - redis
+      # redis:
+      #   condition: service_healthy
+      # postgres:
+      #   condition: service_healthy
+    restart: on-failure
+    env_file: .env.compose
+    # environment:
+    #   - PORT=8000
+    #   - REDIS_ADDR=redis:6379
+    #   - POSTGRES_DSN=host=postgres user=gorm password=gorm dbname=gorm port=5432 sslmode=disable
+
+  redis:
+    image: redis
+    ports: 
+      - "6379:6379"
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:5432"]
+    #   interval: 1s
+    #   timeout: 10s
+    #   retries: 3
+    #   start_period: 5s
+
+  postgres:
+    image: postgres
+    ports: 
+        - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: gorm
+      POSTGRES_USER: gorm
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:5432"]
+    #   interval: 1s
+    #   timeout: 10s
+    #   retries: 3
+    #   start_period: 5s
