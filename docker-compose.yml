@@ -1,33 +1,38 @@
 services:
-  api:
-    build: .
-    ports:
-      - "3001:8000"
-    # links:
-    #   - "db:postgres"
-    #   - "cache:redis"
-    depends_on:
-      postgres: 
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-    restart: on-failure
-    env_file: .env.compose
   redis:
     image: redis
     healthcheck:
-      test: ["CMD", "redis-cli","ping"]
-    ports: 
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    ports:
       - "6379:6379"
+    restart: always
 
   postgres:
     image: postgres
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U gorm"]
+      test: [ "CMD-SHELL", "pg_isready -U gorm" ]
       interval: 5s
       timeout: 5s
       retries: 5
-    ports: 
-        - "5432:5432"
+    ports:
+      - "5432:5432"
     restart: always
+    env_file: .env.compose
+
+  api:
+    build: .
+    ports:
+      - "3001:8000"
+    links:
+      - "postgres:db"
+      - "redis:cache"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: on-failure
     env_file: .env.compose

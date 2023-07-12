@@ -66,19 +66,19 @@ func demo(demoConfig DemoConfig) {
 
 func main() {
 	webPort := os.Getenv("PORT")
-	redisAddr := os.Getenv("REDIS_ADDR")
-	redisPassword := os.Getenv("REDIS_PASSWORD")
-	postgresDSN := os.Getenv("POSTGRES_DSN")
+	cacheAddr := os.Getenv("CACHE_ADDR")
+	cachePassword := os.Getenv("CACHE_PASSWORD")
+	dbDSN := os.Getenv("DB_DSN")
 
-	db, err := gorm.Open(postgres.Open(postgresDSN), &gorm.Config{})
+	db, err := gorm.Open(postgres.Open(dbDSN), &gorm.Config{})
 
 	if err != nil {
 		panic(err)
 	}
 
 	cache := redis.NewClient(&redis.Options{
-		Addr:     redisAddr,
-		Password: redisPassword,
+		Addr:     cacheAddr,
+		Password: cachePassword,
 		DB:       0,
 	})
 
